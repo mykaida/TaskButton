@@ -30,6 +30,6 @@ class MainActivity : AppCompatActivity() {
 
     fun onButtonClick(view: View){
         textResult.text = editTextET.text.reversed()
-        textNumber.text = editTextET.text.length.toString()
+        textNumber.text = editTextET.text.filter { !it.isWhitespace() }.length.toString()
     }
 }
